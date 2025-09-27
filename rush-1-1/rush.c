@@ -25,7 +25,7 @@ void line(int x)
     write(1, "o\n", 2);
 }
 
-void rush(int x, int y)
+void condition(int x, int y)
 {
     if (x == 1 && y == 1)
         write(1, "o\n", 2);
@@ -40,4 +40,12 @@ void rush(int x, int y)
         column(x, y);
         line(x);
     }
+}
+
+void rush(int x, int y)
+{
+    if (x <= 0 || y <= 0)
+        write(1, "Invalid size\n", 13);
+    else
+        condition(x, y);
 }
