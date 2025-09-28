@@ -50,6 +50,7 @@ void rush_bis(int x, int y)
     for (int j = 0; j < x - 2; j++)
         write(1, "B", 1);
     write(1, "C", 1);
+    rush_bis_bis(x, y);
 }
 
 void rush(int x, int y)
@@ -69,4 +70,5 @@ void rush(int x, int y)
             write(1, "B", 1);
         return;
     }
+    rush_bis(x, y);
 }
